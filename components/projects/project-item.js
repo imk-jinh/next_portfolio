@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ProjectItem({ data }) {
   const title = data.properties.이름.title.plain_text;
@@ -8,6 +9,10 @@ export default function ProjectItem({ data }) {
   const tags = data.properties.태그.multi_select;
   const start = data.properties.날짜.date.start;
   const end = data.properties.날짜.date.end;
+  const id = data.id; // 이 부분을 Notion 페이지의 ID로 수정
+  const url = id.replace(/-/g, ''); // '-'를 제거하여 URL에 사용
+
+  console.log(url);
 
   const calculatedPeriod = (start, end) => {
     const startDateStringArray = start.split('-');
@@ -36,23 +41,35 @@ export default function ProjectItem({ data }) {
 
   return (
     <div className="project-card">
-      <Image
-        className="rounded-t-xl"
-        src={imgSrc}
-        alt="cover image"
-        width="50"
-        height="30"
-        layout="responsive"
-        objectFit="cover"
-        quality={100}
-      />
+      <Link
+        href={`https://celestial-cheddar-71c.notion.site/${encodeURIComponent(
+          title
+        )}-${url}`}
+        legacyBehavior
+      >
+        <a>
+          <Image
+            className="rounded-t-xl"
+            src={imgSrc}
+            alt="cover image"
+            width="50"
+            height="30"
+            layout="responsive"
+            objectFit="cover"
+            quality={100}
+          />
+        </a>
+      </Link>
 
       <div className="p-4 flex flex-col">
         <h1 className="text-2xl font-bold">{title}</h1>
         <h3 className="mt-4 text-xl">{description}</h3>
-        <a href={github}>깃허브 바로가기</a>
-        <p className="my-1 ">
-          작업기간 : {start} ~ {end} ({calculatedPeriod(start, end)}일)
+        <a href={github} className="m-5 bg-text-green-500">
+          GitHub 바로가기
+        </a>
+        <p className="my-5">
+          프로젝트 소요 기간 : {start} ~ {end} ({calculatedPeriod(start, end)}
+          일)
         </p>
         <div className="flex items-start mt-2">
           {tags.map((aTag) => (

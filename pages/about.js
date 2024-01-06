@@ -62,6 +62,7 @@ export default function About() {
                     ></path>
                   </svg>
                   <span>경기도 수원시</span>
+                  <span>경기도 안성시</span>
                 </li>
                 <li>
                   <svg

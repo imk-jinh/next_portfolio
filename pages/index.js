@@ -7,7 +7,7 @@ export default function Home() {
     <Layout>
       <Head>
         <title>김진형의 포트폴리오</title>
-        <meta name="description" content="오늘도 빡코딩" />
+        <meta name="description" content="jinhyungchannels" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />

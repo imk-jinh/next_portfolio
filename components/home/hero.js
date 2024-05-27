@@ -11,7 +11,7 @@ export default function Hero() {
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
               안녕하세요 :)
               <br className="hidden lg:inline-block" />
-              주니어 Backend 개발자 김진형입니다.
+              Backend 개발자 김진형입니다.
             </h1>
             <p className="mb-8 leading-relaxed">
               저는 건축학과로 대학교에 진학을 하였습니다. 건축 설계를 시작하고

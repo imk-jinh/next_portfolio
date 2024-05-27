@@ -71,7 +71,7 @@ export default function ProjectItem({ data }) {
           프로젝트 소요 기간 : {start} ~ {end} ({calculatedPeriod(start, end)}
           일)
         </p>
-        <div className="flex items-start mt-2">
+        <div className="flex flex-wrap items-start mt-2">
           {tags.map((aTag) => (
             <h1
               className="px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30"

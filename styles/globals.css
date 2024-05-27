@@ -11,66 +11,43 @@
 }
 
 .project-card {
-  @apply flex flex-col m-3 rounded-xl w-4/5
-            transition duration-300 transform border border-gray-300
-            hover:scale-105
-            hover:shadow-lg
-            dark:border-gray-200/50
-            dark:hover:shadow-gray-400/40
-
-            hover:text-blue-600;
+  @apply flex flex-col m-3 rounded-xl w-full sm:w-4/5 lg:w-3/5 transition duration-300 transform border border-gray-300 hover:scale-105 hover:shadow-lg dark:border-gray-200/50 dark:hover:shadow-gray-400/40 hover:text-blue-600;
 }
+
 .text-gray-600 {
   @apply bg-white dark:bg-slate-600;
 }
 
 .about {
-  @apply bg-white dark:bg-slate-600;
-  padding: 150px 0 95px;
+  @apply bg-white dark:bg-slate-600 py-12 sm:py-24 px-4 sm:px-8;
 }
+
 .profile {
-  background-color: #fff;
-  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.25);
-  padding-bottom: 40px;
-  width: 80%;
-  padding: 80px 0 60px;
+  @apply bg-white shadow-lg dark:shadow-none p-10 w-full sm:w-4/5 lg:w-3/5 mx-auto rounded-lg;
 }
+
 .about-inner {
-  margin: 20px auto 0;
-  padding: 20px;
-  width: 980px;
-  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.18);
+  @apply mx-auto mt-10 p-5 sm:p-10 w-full max-w-4xl shadow-lg;
 }
 
 .profile-inner {
-  align-items: center;
-  display: flex;
-  justify-content: space-evenly;
+  @apply flex flex-col sm:flex-row items-center justify-between;
 }
+
 .profile-img {
-  background-image: url(../public/profile.png);
-  background-size: cover;
-  border-radius: 50%;
-  display: flex;
-  height: 360px;
-  width: 280px;
+  @apply bg-cover bg-center rounded-full w-40 h-40 sm:w-60 sm:h-60 mb-6 sm:mb-0;
 }
+
 .profile-list {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 20px;
-  height: 360px;
-  width: 540px;
+  @apply text-slate-700 dark:text-slate-300 text-base sm:text-lg;
 }
 
 .profile-list-svg {
-  margin: 15px;
+  @apply m-3;
 }
 
 .about-title {
-  font-size: 18px;
-  text-align: center;
-  margin: 30px;
-  font-weight: 700;
+  @apply text-2xl text-center mt-6 font-bold;
 }
 
 h1,
@@ -83,8 +60,7 @@ h6 {
 }
 
 footer {
-  @apply text-gray-600 dark:text-white
-    bg-gray-100 dark:bg-slate-600/20;
+  @apply text-gray-600 dark:text-white bg-gray-100 dark:bg-slate-600/20;
 }
 
 a {
@@ -96,10 +72,5 @@ p {
 }
 
 ul li {
-  @apply text-gray-600 dark:text-white;
-  align-items: center;
-  display: flex;
-  margin-bottom: 6px;
-  list-style: none;
-  vertical-align: baseline;
+  @apply text-gray-600 dark:text-white flex items-center mb-2 list-none;
 }

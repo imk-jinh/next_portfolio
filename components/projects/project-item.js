@@ -61,20 +61,19 @@ export default function ProjectItem({ data }) {
         </a>
       </Link>
 
+      {/* className="m-5 bg-text-green-500" */}
       <div className="p-4 flex flex-col">
         <h1 className="text-2xl font-bold">{title}</h1>
         <h3 className="mt-4 text-xl">{description}</h3>
-        <a href={github} className="m-5 bg-text-green-500">
-          GitHub 바로가기
-        </a>
-        <p className="my-5">
+        <a href={github}>GitHub 바로가기</a>
+        <p className="my-1">
           프로젝트 소요 기간 : {start} ~ {end} ({calculatedPeriod(start, end)}
           일)
         </p>
         <div className="flex items-start mt-2">
           {tags.map((aTag) => (
             <h1
-              className="px-2 py-1 mr-2 mb-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30"
+              className="px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30"
               key={aTag.id}
             >
               {aTag.name}

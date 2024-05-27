@@ -5,7 +5,7 @@ export default function ProjectItem({ data }) {
   const title = data.properties.이름.title.plain_text;
   const github = data.properties.Git.url;
   const description = data.properties.설명.rich_text[0].plain_text;
-  const imgSrc = data.cover.file?.url || data.cover.external.url;
+  const imgSrc = data.cover.file.url || data.cover.external.url;
   const tags = data.properties.태그.multi_select;
   const start = data.properties.날짜.date.start;
   const end = data.properties.날짜.date.end;

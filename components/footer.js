@@ -15,7 +15,7 @@ export default function Footer() {
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
               <a
-                href="https://wa.me/rlawlsgud980@naver.com"
+                href="https://open.kakao.com/o/s1L7Y4tg"
                 className="ml-3 text-gray-500"
               >
                 <svg

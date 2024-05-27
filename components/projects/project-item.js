@@ -10,7 +10,7 @@ export default function ProjectItem({ data }) {
   const start = data.properties.날짜.date.start;
   const end = data.properties.날짜.date.end;
   const id = data.id; // 이 부분을 Notion 페이지의 ID로 수정
-  const url = id.replace(/-/g, ''); // '-'를 제거하여 URL에 사용
+  // const url = id.replace(/-/g, ''); // '-'를 제거하여 URL에 사용
 
   console.log(url);
 
@@ -52,8 +52,8 @@ export default function ProjectItem({ data }) {
             className="rounded-t-xl"
             src={imgSrc}
             alt="cover image"
-            width="50"
-            height="30"
+            width="100%"
+            height="50%"
             layout="responsive"
             objectFit="cover"
             quality={100}

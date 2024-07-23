@@ -11,7 +11,7 @@ export default function Projects({ projects }) {
       <div className="flex flex-col items-center justify-center min-h-screen px-3 mb-10">
         <Head>
           <title>김진형의 포트폴리오</title>
-          <meta name="description" content="오늘도 빡코딩!" />
+          <meta name="description" content="ㅎㅎ" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <h1 className="text-4xl font-bold sm:text-6xl">

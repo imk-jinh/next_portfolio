@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Animation from './animation';
-import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -24,9 +23,17 @@ export default function Hero() {
               있습니다. 이 곳은 저의 그러한 발전 과정을 한 눈에 볼 수 있는
               공간입니다.
             </p>
-            <div className="flex justify-center">
+            <div className="flex space-x-4">
               <Link href="/projects" legacyBehavior>
                 <button className="btn-project">프로젝트 보러가기.</button>
+              </Link>
+              <Link
+                href="https://velog.io/@jinhyungkim980/posts"
+                legacyBehavior
+              >
+                <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400">
+                  블로그 보러가기
+                </button>
               </Link>
             </div>
           </div>

@@ -42,3 +42,12 @@ a {
 p {
   @apply text-slate-500 dark:text-slate-400;
 }
+
+.home__avatar {
+  height: 20em;
+  width: 20em;
+}
+
+.about {
+  padding: 55px;
+}
